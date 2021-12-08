@@ -24,12 +24,19 @@ let rounds = 0;
 
 function game() {
     
+    if (rounds <=100 && playerWins === 3) {
+        return "You've already won the match!"
+    } else if (rounds <=100 && computerWins === 3) {
+        return "You've already lost the match! You can try reloading and playing again."
+    }
+
     const computerSelection = computerPlay();
     const playerSelection = prompt("Choose 'Rock', 'Paper' or 'Scissors'").toLowerCase();
     if (playerSelection !== Rock && playerSelection !== Paper && playerSelection !== Scissors) {
         console.log("Please input Rock, Paper or Scissors");
-        return;
+        return;   
     }
+   
     function playRound(playerSelection, computerSelection) { 
         
         if (playerSelection === Rock && computerSelection === Scissors){
@@ -57,6 +64,7 @@ function game() {
         console.log("You tied this round! Try again");
         return 0
     }
+    rounds++
     let roundResult = playRound(playerSelection, computerSelection);
     switch(roundResult) {
         case 1:
@@ -66,11 +74,9 @@ function game() {
             computerWins++; 
             break;
     }
-    rounds++
-
-    if (rounds <= 20 && playerWins === 3) {
+    if (rounds <= 100 && playerWins === 3) {
         return "You've Won the match, Congratulations!"
-    } else if (rounds <= 20 && computerWins === 3) {
+    } else if (rounds <= 100 && computerWins === 3) {
         return "You've Lost the match, Try again."
     }
 }
