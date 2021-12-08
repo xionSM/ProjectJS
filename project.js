@@ -57,7 +57,7 @@ function game() {
         console.log("You tied this round! Try again");
         return 0
     }
-    const roundResult = playRound(playerSelection, computerSelection);
+    let roundResult = playRound(playerSelection, computerSelection);
     switch(roundResult) {
         case 1:
             playerWins++;
