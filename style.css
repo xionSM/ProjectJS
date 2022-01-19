@@ -1,0 +1,20 @@
+h1 {
+    justify-content: center;
+    display: flex;
+}
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
+}
+.container {
+    gap: 20px;
+}
+.container .btn {
+    background-color: #7eaffb;
+    border: none;
+    color: black;
+    padding: 14px 40px;
+    border-radius: 10px;
+    font-size: 16px
+}
