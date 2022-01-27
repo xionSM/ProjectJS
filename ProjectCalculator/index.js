@@ -71,12 +71,50 @@ let newArray = [];
 
 buttons[3].addEventListener("click", () => {
     newArray[0] = sum;
+    if ( typeof newArray[3] === "number" && typeof newArray[1] === "number" && newArray[3] === newArray[1]) {
+        newArray[2] = input.valueAsNumber
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result
+        input.value = newArray[3];
+        return
+    }
+    if (newArray[3] > newArray[1] || newArray[3] < newArray[1]) {
+        input.value = ''
+        newArray[1] = newArray[3]
+        return
+    }
+    if (typeof newArray[1] === "number") {
+        newArray[2] = input.valueAsNumber
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result;
+        input.value = newArray[3];
+        return
+    }
     newArray[1] = input.valueAsNumber;
     input.value = '';
 })
 
 buttons[8].addEventListener("click", () => {
     newArray[0] = sub;
+    if ( typeof newArray[3] === "number" && typeof newArray[1] === "number" && newArray[3] === newArray[1]) {
+        newArray[2] = input.valueAsNumber
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result
+        input.value = newArray[3];
+        return
+    }
+    if (newArray[3] < newArray[1] || newArray[3] > newArray[1]) {
+        input.value = ''
+        newArray[1] = newArray[3]
+        return
+    }
+    if (typeof newArray[1] === "number") {
+        newArray[2] = input.valueAsNumber
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result;
+        input.value = newArray[3];
+        return
+    }
     newArray[1] = input.valueAsNumber;
     input.value = '';
     
@@ -92,27 +130,27 @@ buttons[13].addEventListener("click", () => {
     input.value = '';
 })
 buttons[14].addEventListener("click", () => {
-    if (newArray[3] === newArray[1]) {
-        newArray[2] = input.valueAsNumber
-        let result = operate(newArray[0], newArray[1], newArray[2])
-        newArray[3] = result;
-        input.value = newArray[3];
-        return
-    }
-    if (newArray[3] > newArray[1]) {
-        newArray[1] = newArray[3]
-        let result = operate(newArray[0],newArray[1], newArray[2])
-        newArray[3] = result
-        input.value = newArray[3]
-        return
-    }
-    if (newArray[3] < newArray[1]) {
-        newArray[1] = newArray[3]
-        let result = operate(newArray[0], newArray[1], newArray[2])
-        newArray[3] = result
-        input.value = newArray[3]
-        return
-    }
+    // if (newArray[3] === newArray[1]) {
+    //     newArray[2] = input.valueAsNumber
+    //     let result = operate(newArray[0], newArray[1], newArray[2])
+    //     newArray[3] = result;
+    //     input.value = newArray[3];
+    //     return
+    // }
+    // if (newArray[3] > newArray[1]) {
+    //     newArray[1] = newArray[3]
+    //     let result = operate(newArray[0],newArray[1], newArray[2])
+    //     newArray[3] = result
+    //     input.value = newArray[3]
+    //     return
+    // }
+    // if (newArray[3] < newArray[1]) {
+    //     newArray[1] = newArray[3]
+    //     let result = operate(newArray[0], newArray[1], newArray[2])
+    //     newArray[3] = result
+    //     input.value = newArray[3]
+    //     return
+    // }
     newArray[2] = input.valueAsNumber
     let result = operate(newArray[0], newArray[1], newArray[2])
     newArray[3] = result;
