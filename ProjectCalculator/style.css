@@ -1,0 +1,18 @@
+body {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 36px;
+}
+.firstrow {
+    align-self: baseline;
+}
+input {
+    margin-bottom: 2.5em;
+}
