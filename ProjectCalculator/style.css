@@ -6,13 +6,54 @@ body {
 }
 
 button {
-    margin-bottom: 10px;
     padding: 5px;
-    width: 36px;
+    width: 45px;
+    height: 45px;
+    font-weight: bolder;
 }
-.firstrow {
-    align-self: baseline;
+.calculator {
+    display: flex;
+    flex-flow: column;
+    width: 205px;
+    text-align: center;
+    gap: 5px;
+    height: 210px;
+    justify-content: center;
+    background-color: #000000e6;
 }
-input {
-    margin-bottom: 2.5em;
+
+.display {
+    padding-bottom: 10px;
+    text-align: end;
+    padding-right: 6px;
+    padding-top: 10px;
+    background-color: gray;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    border: solid;
+}
+.calculator .num {
+    background-color: #d895ff;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px
+}
+.calculator .operator {
+    background-color: #f7ff82;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px
+}
+
+.calculator .clear {
+    background-color: #ffc982;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
 }
