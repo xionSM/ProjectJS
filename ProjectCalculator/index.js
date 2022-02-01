@@ -120,10 +120,18 @@ operators[3].addEventListener("click", () => {
         return display.textContent
     }
     newArray[2] = Number(display.textContent)
+    if(newArray[0] === divide) {
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result.toFixed(2)
+        display.textContent = result.toFixed(2)
+        newArray[1] = result.toFixed(2)
+        newArray[0] = undefined
+        return
+    }
     let result = operate(newArray[0], newArray[1], newArray[2])
-    newArray[3] = result.toFixed(2)
-    display.textContent = result.toFixed(2)
-    newArray[1] = result.toFixed(2)
+    newArray[3] = result
+    display.textContent = result
+    newArray[1] = result
     newArray[0] = undefined
     return
 })
