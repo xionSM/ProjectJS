@@ -17,18 +17,23 @@ button {
     width: 205px;
     text-align: center;
     gap: 5px;
-    height: 210px;
     justify-content: center;
     background-color: #000000e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .display {
-    padding-bottom: 10px;
-    text-align: end;
-    padding-right: 6px;
-    padding-top: 10px;
-    background-color: gray;
+    background-color: #cacaca;
     font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    height: 40px;
+    text-align: end;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
+
 }
 .container {
     display: flex;
@@ -51,6 +56,20 @@ button {
 }
 
 .calculator .clear {
+    background-color: #ffc982;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.decimal {
+    background-color: #ffc982;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.backspace {
     background-color: #ffc982;
     border: none;
     color: black;
