@@ -19,59 +19,339 @@ const operate = (operator, num, num2) => {
         return
     }
 }
+let nums = document.querySelectorAll(".num");
+let display = document.querySelector("div.display");
+let clear = document.querySelector(".clear");
+let operators = document.querySelectorAll(".operator");
+let backspace = document.querySelector(".backspace");
+let decimal = document.querySelector(".decimal");
+for (let i = 0; nums.length > i; i++) {
+    console.log(i)
+    if(nums[i] === nums[9]) {
+        nums[i].addEventListener("click", () => {
+            if (display.textContent === "ERROR") {
+                display.textContent = 0;
+                return
+            }
+            if(display.textContent == newArray[1]){
+                newArray[4] = "";
+                display.textContent = newArray[4]
+                newArray[4] += 0
+                display.textContent = newArray[4]
+                return
+            }
+            if (display.textContent === "0") {
+                display.textContent = 0;
+                return
+            }
+            display.textContent += 0;
+            
+        });
+    }
+    nums[i].addEventListener("click", () => {
+        if (display.textContent === "ERROR") {
+                    display.textContent = i + 1;
+                    return
+                }
+                if(display.textContent == newArray[1]){
+                    newArray[4] = "";
+                    display.textContent = newArray[4]
+                    newArray[4] += i + 1
+                    display.textContent = newArray[4]
+                    return
+                }
+                if (display.textContent === "0" || display.textContent === 0) {
+                    display.textContent =  i + 1;
+                    return
+                }
+                display.textContent += i + 1;
+    })
+}
+// nums[0].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 1;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 1
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 1;
+//         return
+//     }
+//     display.textContent += 1;
+// });
+// nums[1].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 2;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 2
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 2;
+//         return
+//     }
+//     display.textContent += 2;
+
+// });
+// nums[2].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 3;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 3
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 3;
+//         return
+//     }
+//     display.textContent += 3;
+
+// });
+// nums[3].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 4;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 4
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 4;
+//         return
+//     }
+//     display.textContent += 4;
+    
+// });
+// nums[4].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 5;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 5
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//     display.textContent = 5;
+//     return
+// }
+// display.textContent += 5;
+
+// });
+// nums[5].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 6;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 6
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 6;
+//         return
+//     }
+//     display.textContent += 6;
+
+// });
+// nums[6].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 7;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 7
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 7;
+//         return
+//     }
+//     display.textContent += 7;
+    
+// });
+// nums[7].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 8;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 8
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 8;
+//         return
+//     }
+//     display.textContent += 8;
+    
+// });
+// nums[8].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 9;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 9
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 9;
+//         return
+//     }
+//     display.textContent += 9;
+
+// });
+// nums[9].addEventListener("click", () => {
+//     if (display.textContent === "ERROR") {
+//         display.textContent = 0;
+//         return
+//     }
+//     if(display.textContent == newArray[1]){
+//         newArray[4] = "";
+//         display.textContent = newArray[4]
+//         newArray[4] += 0
+//         display.textContent = newArray[4]
+//         return
+//     }
+//     if (display.textContent === "0") {
+//         display.textContent = 0;
+//         return
+//     }
+//     display.textContent += 0;
+    
+// });
+clear.addEventListener("click", () => {
+    display.textContent = "0";
+    newArray = [];
+})
+let newArray = [];
+
+operators[0].addEventListener("click", () => {
+    if (typeof newArray[0] === "function") {
+        newArray[2] = Number(display.textContent)
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = Number(result.toFixed(2))
+        display.textContent = Number(result.toFixed(2))
+        newArray[1] = Number(result.toFixed(2))
+        newArray[0] = sum
+        return
+    }
+    newArray[0] = sum
+    newArray[1] = Number(display.textContent)
+})
+operators[1].addEventListener("click", () => {
+    if (typeof newArray[0] === "function") {
+        newArray[2] = Number(display.textContent)
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = Number(result.toFixed(2))
+        display.textContent = Number(result.toFixed(2))
+        newArray[1] = Number(result.toFixed(2))
+        newArray[0] = sub
+        return
+    }
+    newArray[0] = sub
+    newArray[1] = Number(display.textContent)
+})
+operators[2].addEventListener("click", () => {
+    if (typeof newArray[0] === "function") {
+        newArray[2] = Number(display.textContent)
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = result
+        display.textContent = result
+        newArray[1] = result
+        newArray[0] = multiply
+        return
+    }
+    newArray[0] = multiply
+    newArray[1] = Number(display.textContent)
+})
+operators[3].addEventListener("click", () => {
+    if (newArray[0] === divide && display.textContent == 0 || newArray[1] == 0) {
+        newArray = [];
+        return display.textContent = "ERROR"
+    }
+    if (typeof newArray[0] === "undefined" || newArray[0] === undefined) {
+        return display.textContent
+    }
+    newArray[2] = Number(display.textContent)
+    let result = operate(newArray[0], newArray[1], newArray[2])
+    newArray[3] = result
+    display.textContent = result
+    newArray[1] = result
+    newArray[0] = undefined
+    return
+})
+operators[4].addEventListener("click", () => {
+
+    if (newArray[0] === divide && display.textContent == 0 || newArray[1] == 0) {
+        newArray = [];
+        return display.textContent = "ERROR"
+    }
+    if (typeof newArray[0] === "function") {
+        newArray[2] = Number(display.textContent)
+        let result = operate(newArray[0], newArray[1], newArray[2])
+        newArray[3] = Number(result.toFixed(2))
+        display.textContent = Number(result.toFixed(2))
+        newArray[1] = Number(result.toFixed(2))
+        newArray[0] = divide
+        return
+    }
+    newArray[0] = divide
+    newArray[1] = Number(display.textContent)
+
+})
+decimal.addEventListener("click", () => {
+    if (display.textContent.includes(".")){
+        return
+    }
+    display.textContent += "."
+})
+backspace.addEventListener("click", () => {
+    let displayLength = display.textContent.length;
+    let displayValue = display.textContent
+    display.textContent = displayValue.substring(0, (displayLength - 1))
+    if(displayLength - 1 === 0) {
+        display.textContent = 0
+    }
+})
 let buttons = document.querySelectorAll("button");
-
-buttons[0].addEventListener("click", () => {
-    
+window.addEventListener("keydown", (e) => {
+const key = document.querySelector(`button[data-key="${e.keyCode}"]`)
+key.click()
 });
-buttons[1].addEventListener("click", () => {
-
-});
-buttons[2].addEventListener("click", () => {
-
-});
-buttons[5].addEventListener("click", () => {
-    
-});
-buttons[6].addEventListener("click", () => {
-
-});
-buttons[7].addEventListener("click", () => {
-
-});
-buttons[10].addEventListener("click", () => {
-    
-});
-buttons[11].addEventListener("click", () => {
-    
-});
-buttons[12].addEventListener("click", () => {
-
-});
-buttons[15].addEventListener("click", () => {
-    
-});
-buttons[4].addEventListener("click", () => {
-    
-})
-
-buttons[3].addEventListener("click", () => {
-    
-})
-
-buttons[8].addEventListener("click", () => {
-    
-})
-buttons[9].addEventListener("click", () => {
-    
-})
-buttons[13].addEventListener("click", () => {
-   
-})
-buttons[14].addEventListener("click", () => {
-   
-    
-})
-
-
-
