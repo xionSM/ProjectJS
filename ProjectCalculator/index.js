@@ -25,29 +25,8 @@ let clear = document.querySelector(".clear");
 let operators = document.querySelectorAll(".operator");
 let backspace = document.querySelector(".backspace");
 let decimal = document.querySelector(".decimal");
-for (let i = 0; nums.length > i; i++) {
+for (let i = 0; nums.length - 1 > i; i++) {
     console.log(i)
-    if(nums[i] === nums[9]) {
-        nums[i].addEventListener("click", () => {
-            if (display.textContent === "ERROR") {
-                display.textContent = 0;
-                return
-            }
-            if(display.textContent == newArray[1]){
-                newArray[4] = "";
-                display.textContent = newArray[4]
-                newArray[4] += 0
-                display.textContent = newArray[4]
-                return
-            }
-            if (display.textContent === "0") {
-                display.textContent = 0;
-                return
-            }
-            display.textContent += 0;
-            
-        });
-    }
     nums[i].addEventListener("click", () => {
         if (display.textContent === "ERROR") {
                     display.textContent = i + 1;
@@ -67,195 +46,25 @@ for (let i = 0; nums.length > i; i++) {
                 display.textContent += i + 1;
     })
 }
-// nums[0].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 1;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 1
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 1;
-//         return
-//     }
-//     display.textContent += 1;
-// });
-// nums[1].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 2;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 2
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 2;
-//         return
-//     }
-//     display.textContent += 2;
-
-// });
-// nums[2].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 3;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 3
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 3;
-//         return
-//     }
-//     display.textContent += 3;
-
-// });
-// nums[3].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 4;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 4
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 4;
-//         return
-//     }
-//     display.textContent += 4;
+nums[9].addEventListener("click", () => {
+    if (display.textContent === "ERROR") {
+        display.textContent = 0;
+        return
+    }
+    if(display.textContent == newArray[1]){
+        newArray[4] = "";
+        display.textContent = newArray[4]
+        newArray[4] += 0
+        display.textContent = newArray[4]
+        return
+    }
+    if (display.textContent === "0" || display.textContent === 0) {
+        display.textContent = 0;
+        return
+    }
+    display.textContent += 0;
     
-// });
-// nums[4].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 5;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 5
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//     display.textContent = 5;
-//     return
-// }
-// display.textContent += 5;
-
-// });
-// nums[5].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 6;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 6
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 6;
-//         return
-//     }
-//     display.textContent += 6;
-
-// });
-// nums[6].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 7;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 7
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 7;
-//         return
-//     }
-//     display.textContent += 7;
-    
-// });
-// nums[7].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 8;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 8
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 8;
-//         return
-//     }
-//     display.textContent += 8;
-    
-// });
-// nums[8].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 9;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 9
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 9;
-//         return
-//     }
-//     display.textContent += 9;
-
-// });
-// nums[9].addEventListener("click", () => {
-//     if (display.textContent === "ERROR") {
-//         display.textContent = 0;
-//         return
-//     }
-//     if(display.textContent == newArray[1]){
-//         newArray[4] = "";
-//         display.textContent = newArray[4]
-//         newArray[4] += 0
-//         display.textContent = newArray[4]
-//         return
-//     }
-//     if (display.textContent === "0") {
-//         display.textContent = 0;
-//         return
-//     }
-//     display.textContent += 0;
-    
-// });
+});
 clear.addEventListener("click", () => {
     display.textContent = "0";
     newArray = [];
