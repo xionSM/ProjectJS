@@ -25,6 +25,7 @@ let clear = document.querySelector(".clear");
 let operators = document.querySelectorAll(".operator");
 let backspace = document.querySelector(".backspace");
 let decimal = document.querySelector(".decimal");
+
 for (let i = 0; nums.length - 1 > i; i++) {
     console.log(i)
     nums[i].addEventListener("click", () => {
@@ -120,9 +121,9 @@ operators[3].addEventListener("click", () => {
     }
     newArray[2] = Number(display.textContent)
     let result = operate(newArray[0], newArray[1], newArray[2])
-    newArray[3] = result
-    display.textContent = result
-    newArray[1] = result
+    newArray[3] = result.toFixed(2)
+    display.textContent = result.toFixed(2)
+    newArray[1] = result.toFixed(2)
     newArray[0] = undefined
     return
 })
