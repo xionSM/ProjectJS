@@ -27,7 +27,6 @@ let backspace = document.querySelector(".backspace");
 let decimal = document.querySelector(".decimal");
 
 for (let i = 0; nums.length - 1 > i; i++) {
-    console.log(i)
     nums[i].addEventListener("click", () => {
         if (display.textContent === "ERROR") {
                     display.textContent = i + 1;
@@ -170,6 +169,60 @@ backspace.addEventListener("click", () => {
 })
 let buttons = document.querySelectorAll("button");
 window.addEventListener("keydown", (e) => {
-const key = document.querySelector(`button[data-key="${e.keyCode}"]`)
-key.click()
+    switch (e.key){
+        case "0":
+            nums[9].click()
+            break;
+        case "1":
+            nums[0].click()
+            break;
+        case "2":
+            nums[1].click()
+            break;
+        case "3":
+            nums[2].click()
+            break;
+        case "4":
+            nums[3].click()
+            break;
+        case "5":
+            nums[4].click()
+            break;
+        case "6":
+            nums[5].click()
+            break;
+        case "7":
+            nums[6].click()
+            break;
+        case "8":
+            nums[7].click()
+            break;
+        case "9":
+            nums[8].click()
+            break;
+        case "+":
+            operators[0].click()
+            break;
+        case "-":
+            operators[1].click()
+            break;
+        case "*":
+            operators[2].click()
+            break;
+        case "=":
+            operators[3].click()
+            break;
+        case "/":
+            operators[4].click()
+            break;
+        case ".":
+            decimal.click()
+            break;
+        case "Backspace":
+            backspace.click()
+            break;
+        case "Delete":
+            clear.click()
+            break;
+    }
 });
